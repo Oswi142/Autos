@@ -14,4 +14,12 @@ describe("Autito", () => {
         expect(autito.y).toBe(3);
         expect(autito.direc).toBe("N");
     });
+    it("debería definir la posición inicial correctamente", () => {
+        const comando = "4,2,E";
+        const resultado = autito.definirPosIni(comando);
+        expect(resultado).toBe(comando);
+        expect(autito.x).toBe(4);
+        expect(autito.y).toBe(2);
+        expect(autito.direc).toBe("E");
+    });
 });  

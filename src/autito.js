@@ -31,5 +31,20 @@ class Autito{
             this.direc = cadena[2];
         }
     }
+
+    
+    definirPosIni(comando)
+    {
+        let res=this.asignarValores(comando);
+        if(res === undefined)
+        {
+            return comando;
+        }
+        else
+        {
+            return res;
+        }
+
+    }
 }
 export default Autito;
