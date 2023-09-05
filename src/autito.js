@@ -16,5 +16,20 @@ class Autito{
           this.matriz[i] = new Array(columnas);
       }
     }
+
+    asignarValores(comando)
+    {
+        var cadena = comando.toString().split(',');
+        if (cadena.length !== 3)
+        {
+            return "Valores erroneos";    
+        }
+        else
+        {
+            this.x = +cadena[0];
+            this.y = +cadena[1];
+            this.direc = cadena[2];
+        }
+    }
 }
 export default Autito;
