@@ -105,4 +105,8 @@ describe("Autito", () => {
         autito.definirPosIni("4,2,O")
         expect(autito.interpretarComando("A")).toEqual("3,2,O");
     });
+    it("debería interpretar el comando de girar derecha", () => {
+        autito.definirPosIni("4,2,O")
+        expect(autito.interpretarComando("D")).toEqual("4,2,N");
+    });
 });  
