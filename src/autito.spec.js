@@ -101,4 +101,8 @@ describe("Autito", () => {
         autito.definirPosIni("4,2,O")
         expect(autito.girarIzquierda()).toEqual("S");
     });
+    it("debería interpretar el comando de avanzar", () => {
+        autito.definirPosIni("4,2,O")
+        expect(autito.interpretarComando("A")).toEqual("3,2,O");
+    });
 });  

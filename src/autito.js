@@ -14,8 +14,8 @@ class Autito {
     }
   }
 
-  asignarValores(comando) {
-    var cadena = comando.toString().split(",");
+  asignarValores(coordenadas) {
+    var cadena = coordenadas.toString().split(",");
     if (cadena.length !== 3) {
       return "Valores erroneos";
     } else {
@@ -25,10 +25,10 @@ class Autito {
     }
   }
 
-  definirPosIni(comando) {
-    let res = this.asignarValores(comando);
+  definirPosIni(coordenadas) {
+    let res = this.asignarValores(coordenadas);
     if (res === undefined) {
-      return comando;
+      return coordenadas;
     } else {
       return res;
     }
@@ -63,38 +63,45 @@ class Autito {
     }
   }
 
-  girarDerecha(){
-    switch(this.direc) {
+  girarDerecha() {
+    switch (this.direc) {
       case "N":
-        this.direc="E";
+        this.direc = "E";
         return this.direc;
       case "E":
-        this.direc="S";
+        this.direc = "S";
         return this.direc;
       case "S":
-        this.direc="O";
+        this.direc = "O";
         return this.direc;
       case "O":
-        this.direc="N";
-        return this.direc;  
+        this.direc = "N";
+        return this.direc;
     }
   }
 
-  girarIzquierda(){
-    switch(this.direc) {
+  girarIzquierda() {
+    switch (this.direc) {
       case "E":
-        this.direc="N";
+        this.direc = "N";
         return this.direc;
       case "N":
-        this.direc="O";
+        this.direc = "O";
         return this.direc;
       case "O":
-        this.direc="S";
+        this.direc = "S";
         return this.direc;
       case "S":
-        this.direc="E";
+        this.direc = "E";
         return this.direc;
     }
+  }
+
+  interpretarComando(comando) {
+    if (comando == "A") this.avanzar();
+    if (comando == "D") this.girarDerecha();
+    if (comando == "I") this.girarIzquierda();
+    return this.x + "," + this.y + "," + this.direc;
   }
 }
 export default Autito;
