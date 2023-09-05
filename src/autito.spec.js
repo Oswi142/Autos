@@ -22,4 +22,9 @@ describe("Autito", () => {
         expect(autito.y).toBe(2);
         expect(autito.direc).toBe("E");
     });
+    it("debería retornar error", () => {
+        const comando = "4,2";
+        const resultado = autito.definirPosIni(comando);
+        expect(resultado).toEqual("Valores erroneos");
+    });
 });  
