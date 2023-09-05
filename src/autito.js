@@ -103,5 +103,12 @@ class Autito {
     if (comando == "I") this.girarIzquierda();
     return this.x + "," + this.y + "," + this.direc;
   }
+
+  ejecutarComandos(comandos) {
+    for (let i = 0; i < comandos.length; i++) {
+      this.interpretarComando(comandos[i]);
+    }
+    return this.x + "," + this.y + "," + this.direc;
+  }
 }
 export default Autito;

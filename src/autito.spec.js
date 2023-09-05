@@ -113,4 +113,8 @@ describe("Autito", () => {
         autito.definirPosIni("4,2,O")
         expect(autito.interpretarComando("I")).toEqual("4,2,S");
     });
+    it("debería ejercutar los comandos", () => {
+        autito.definirPosIni("4,2,O")
+        expect(autito.ejecutarComandos("IAD")).toEqual("4,3,O");
+    });
 });  
