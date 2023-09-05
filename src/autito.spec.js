@@ -53,6 +53,10 @@ describe("Autito", () => {
         autito.definirPosIni("4,2,N")
         expect(autito.avanzar()).toEqual("4,1");
     });
+    it("no deberia avanzar hacia el Norte", () => {
+        autito.definirPosIni("0,0,N")
+        expect(autito.avanzar()).toEqual("0,0");
+    });
     it("deberia avanzar hacia el Sur", () => {
         autito.definirPosIni("4,2,S")
         expect(autito.avanzar()).toEqual("4,3");

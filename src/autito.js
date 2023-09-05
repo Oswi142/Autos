@@ -47,13 +47,13 @@ class Autito {
   avanzar() {
     switch (this.direc) {
       case "N":
-        if (this.y < this.columnas) this.matriz[this.x][this.y--];
+        if (this.y > 0) this.matriz[this.x][this.y--];
         return this.x + "," + this.y;
       case "O":
         if (this.x > 0) this.matriz[this.x--][this.y];
         return this.x + "," + this.y;
       case "S":
-        if (this.y > 0) this.matriz[this.x][this.y++];
+        if (this.y < this.columnas) this.matriz[this.x][this.y++];
         return this.x + "," + this.y;
       case "E":
         if (this.x < this.filas) this.matriz[this.x++][this.y];
