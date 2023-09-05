@@ -79,5 +79,22 @@ class Autito {
         return this.direc;  
     }
   }
+
+  girarIzquierda(){
+    switch(this.direc) {
+      case "E":
+        this.direc="N";
+        return this.direc;
+      case "N":
+        this.direc="O";
+        return this.direc;
+      case "O":
+        this.direc="S";
+        return this.direc;
+      case "S":
+        this.direc="E";
+        return this.direc;
+    }
+  }
 }
 export default Autito;
