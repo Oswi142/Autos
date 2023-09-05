@@ -1,15 +1,52 @@
-<html>
-  <body>
-    <h1>Sumador</h1>
-    <form id="sumar-form">
-      <label for="primer-numero">Primer número:</label>
-      <input type="number" id="primer-numero" />
-      <label for="segundo-numero">Segundo número:</label>
-      <input type="number" id="segundo-numero" />
-      <input type="submit" value="Sumar" id="sumar-button" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AUTITOS🏁</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .resultado-container {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+    .resultado-title {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center">AUTITOS🏁</h1>
+    <form id="autito-form">
+      <div class="alert alert-info">
+        <p>Ingrese las instrucciones de la siguiente manera:</p>
+        <ul>
+          <li>Tamaño de la matriz / Posición Inicial en X, Posición Inicial Y y la Dirección / Comandos</li>
+          <li><b>I</b> El auto gira hacia la izquierda</li>
+          <li><b>D</b> El auto gira hacia la derecha</li>
+          <li><b>A</b> El auto avanza en la dirección en la que está apuntando</li>
+        </ul>
+        <hr>
+        <p>Ejemplo de instrucciones: <b>5,5/1,2N/IAIAIAIAA</b></p>
+      </div>
+      <div class="form-group">
+        <label for="comandos">Tamaño de la Tabla:</label>
+        <input type="text" class="form-control" id="comandos-input" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Go!</button>
     </form>
-    <div id="resultado-div"></div>
-
-    <script type="module" src="./src/presenter.js"></script>
-  </body>
+    <div class="resultado-container">
+      <label for="pos-final">Posición Final:</label>
+      <div id="pos-final"></div>
+    </div>
+  </div>
+  <script type="module" src="./src/presenter.js"></script>
+</body>
 </html>
