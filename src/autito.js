@@ -110,5 +110,13 @@ class Autito {
     }
     return this.x + "," + this.y + "," + this.direc;
   }
+
+  ejecutar(instrucciones) {
+    let valores = instrucciones.split("/");
+    this.definirTamanioTablero(valores[0]);
+    this.definirPosIni(valores[1]);
+    this.ejecutarComandos(valores[2]);
+    return this.x + "," + this.y + "," + this.direc;
+  }
 }
 export default Autito;
