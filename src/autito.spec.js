@@ -93,4 +93,8 @@ describe("Autito", () => {
         autito.definirPosIni("4,2,E")
         expect(autito.girarIzquierda()).toEqual("N");
     });
+    it("debería girar del norte al oeste", () => {
+        autito.definirPosIni("4,2,N")
+        expect(autito.girarIzquierda()).toEqual("O");
+    });
 });  
