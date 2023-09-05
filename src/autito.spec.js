@@ -33,4 +33,8 @@ describe("Autito", () => {
     it("deberia devolver valores erroneos", () => {
         expect(autito.definirTamanioTablero("5")).toEqual("Valores erroneos");
     });
+    it("deberia avanzar hacia el Este", () => {
+        autito.definirPosIni("4,2,E")
+        expect(autito.avanzar()).toEqual("5,2");
+    });
 });  
