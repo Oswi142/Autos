@@ -27,4 +27,10 @@ describe("Autito", () => {
         const resultado = autito.definirPosIni(comando);
         expect(resultado).toEqual("Valores erroneos");
     });
+    it("deberia crear un tablero 5x5", () => {
+        expect(autito.definirTamanioTablero("5,5")).toEqual("5,5");
+    });
+    it("deberia devolver valores erroneos", () => {
+        expect(autito.definirTamanioTablero("5")).toEqual("Valores erroneos");
+    });
 });  

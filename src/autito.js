@@ -46,5 +46,19 @@ class Autito{
         }
 
     }
+
+    definirTamanioTablero(dimensiones)
+    {
+        let tamTab = dimensiones.split(',');
+        if(tamTab.length==2)
+        {
+            this.generarTablero(+tamTab[0],+tamTab[1]);
+            return dimensiones;
+        }
+        else
+        {
+            return "Valores erroneos";
+        }
+    }
 }
 export default Autito;
